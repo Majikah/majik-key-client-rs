@@ -1,8 +1,5 @@
 # Majik Key Client (Rust)
 
-# Majik Key Client
-
-
 [![Developed by Zelijah](https://img.shields.io/badge/Developed%20by-Zelijah-red?logo=github&logoColor=white&style=for-the-badge)](https://thezelijah.world) ![GitHub Sponsors](https://img.shields.io/github/sponsors/jedlsf?style=for-the-badge&label=Sponsors&link=https%3A%2F%2Fgithub.com%2Fsponsors%2Fjedlsf)
 
 [![Crates.io](https://img.shields.io/crates/v/majik-key-client.svg?logo=rust&color=D34516)](https://crates.io/crates/majik-key-client) [![Documentation](https://docs.rs/majik-key-client/badge.svg)](https://docs.rs/majik-key) ![crates downloads](https://img.shields.io/crates/d/majik-key-client?logo=rust&color=D34516) [![License](https://img.shields.io/badge/License-Apache_2.0-D34516.svg)](https://opensource.org/licenses/Apache-2.0) ![Rust](https://img.shields.io/badge/Rust-Ready-D34516) 
