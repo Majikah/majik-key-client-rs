@@ -1,0 +1,23 @@
+[package]
+name = "majik-key-client"
+version = "0.2.0"
+edition = "2021"
+description = "Account and session client for majik-key: key manager, client state, own-account registry, SQLite/in-memory repositories."
+license = "Apache-2.0"
+
+[dependencies]
+majik-key = "1.1.1"
+rusqlite = "0.40"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+jiff = "0.2"
+zeroize = { version = "1", features = ["derive", "serde"] }
+
+[dev-dependencies]
+# Tests need a self-contained SQLite. In the Tauri app, enable your SQLCipher feature instead.
+rusqlite = { version = "0.40", features = ["bundled"] }
+
+# Argon2id in an unoptimised build is painfully slow; optimise dependencies even in dev/test.
+[profile.dev.package."*"]
+opt-level = 3
