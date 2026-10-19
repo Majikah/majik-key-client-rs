@@ -1,6 +1,6 @@
 [package]
 name = "majik-key-client"
-version = "0.2.0"
+version = "0.2.1"
 edition = "2021"
 description = "Account and session client for majik-key: key manager, client state, own-account registry, SQLite/in-memory repositories."
 license = "Apache-2.0"

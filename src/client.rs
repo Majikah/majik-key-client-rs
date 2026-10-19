@@ -297,6 +297,18 @@ impl<H: AccountHooks> KeyClient<H> {
         })
     }
 
+    /// Replace the stored own-account contact, e.g. after a higher-level contact directory edited
+    /// it. No hooks run and no events are emitted. Returns `false` if `account` is not an own
+    /// account.
+    pub fn refresh_own_account(&mut self, account: MajikContact) -> bool {
+        if self.own_accounts.contains_key(account.id()) {
+            self.own_accounts.insert(account.id().to_string(), account);
+            true
+        } else {
+            false
+        }
+    }
+
     pub fn is_account_unlocked(&self, id: &str) -> bool {
         self.keys.get(id).map(|k| k.is_unlocked()).unwrap_or(false)
     }
