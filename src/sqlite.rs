@@ -2,8 +2,9 @@
 //!
 //! The connection is shared with the rest of the app (your existing `sqlite_call` /
 //! `sqlite_batch` commands can keep using the same handle), so SQLCipher keying etc. stays the
-//! app's responsibility. This crate depends on plain `rusqlite = "0.40"`; the app enables
-//! `bundled-sqlcipher-vendored-openssl` and Cargo unifies the features.
+//! app's responsibility. Since [`SharedConnection`] exposes rusqlite's `Connection` type,
+//! the host app must also use a compatible `rusqlite 0.43.x` dependency. The app can enable
+//! `bundled-sqlcipher-vendored-openssl`; Cargo unifies compatible feature flags.
 //!
 //! All queries are synchronous. From async Tauri commands, call into the client through
 //! `tauri::async_runtime::spawn_blocking` (SQLite and Argon2id both block).

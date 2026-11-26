@@ -27,10 +27,10 @@ src/
   key_manager.rs    KeyManager  - owns the unlocked-key cache
   state_manager.rs  ClientStateManager (+ account order)
   client.rs         KeyClient<H: AccountHooks> - the orchestrator (accounts are majik-contact MajikContacts)
-tests/client.rs     17 behavioural tests (real majik-key 1.1.1, real Argon2id/ML-KEM/ML-DSA)
+tests/client.rs     17 behavioural tests (real majik-key 1.2.0, real Argon2id/ML-KEM/ML-DSA)
 ```
 
-Requires `majik-key` 1.1.1 (re-exports `majik-contact` 0.2.0) and a recent stable toolchain (verified on 1.91).
+Requires `majik-key` 1.2.0 (re-exports `majik-contact` 0.2.0) and Rust 1.89 or newer.
 
 Verify:
 
