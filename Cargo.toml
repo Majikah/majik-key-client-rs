@@ -1,6 +1,6 @@
 [package]
 name = "majik-key-client"
-version = "0.2.1"
+version = "1.0.0"
 edition = "2021"
 rust-version = "1.89"
 description = "Account and session client for majik-key: key manager, client state, own-account registry, SQLite/in-memory repositories."
